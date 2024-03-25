@@ -24,12 +24,12 @@ zenoh::kedefine!(
     // Liveliness tokens key expressions
     pub ke_liveliness_all: "@ros2_lv/${plugin_id:*}/${remaining:**}",
     pub ke_liveliness_plugin: "@ros2_lv/${plugin_id:*}",
-    pub(crate) ke_liveliness_pub: "@ros2_lv/${plugin_id:*}/MP/${ke:*}/${typ:*}/${qos_ke:*}",
-    pub(crate) ke_liveliness_sub: "@ros2_lv/${plugin_id:*}/MS/${ke:*}/${typ:*}/${qos_ke:*}",
-    pub(crate) ke_liveliness_service_srv: "@ros2_lv/${plugin_id:*}/SS/${ke:*}/${typ:*}",
-    pub(crate) ke_liveliness_service_cli: "@ros2_lv/${plugin_id:*}/SC/${ke:*}/${typ:*}",
-    pub(crate) ke_liveliness_action_srv: "@ros2_lv/${plugin_id:*}/AS/${ke:*}/${typ:*}",
-    pub(crate) ke_liveliness_action_cli: "@ros2_lv/${plugin_id:*}/AC/${ke:*}/${typ:*}",
+    pub(crate) ke_liveliness_pub: "@ros2_lv/${plugin_id:*}/MP/${ke:*}/${node_name:*}/${typ:*}/${qos_ke:*}",
+    pub(crate) ke_liveliness_sub: "@ros2_lv/${plugin_id:*}/MS/${ke:*}/${node_name:*}/${typ:*}/${qos_ke:*}",
+    pub(crate) ke_liveliness_service_srv: "@ros2_lv/${plugin_id:*}/SS/${ke:*}/${node_name:*}/${typ:*}",
+    pub(crate) ke_liveliness_service_cli: "@ros2_lv/${plugin_id:*}/SC/${ke:*}/${node_name:*}/${typ:*}",
+    pub(crate) ke_liveliness_action_srv: "@ros2_lv/${plugin_id:*}/AS/${ke:*}/${node_name:*}/${typ:*}",
+    pub(crate) ke_liveliness_action_cli: "@ros2_lv/${plugin_id:*}/AC/${ke:*}/${node_name:*}/${typ:*}",
 );
 
 pub(crate) fn new_ke_liveliness_pub(
